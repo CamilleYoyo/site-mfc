@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Page essaie</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+
+
+        /*css du body*/
+        section.page-section__container {
+            padding: 20px calc(50% - 582.5px);
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        section.page-section__container a {
+            text-decoration: none;
+            color: #e6233a;
+        }
+
+        .section a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+
+        /*=============================================================Nouvelle entete==============================================*/
+
+        /*Banniere de presentation*/
+        .headers {
+            background-color: #62003b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .headers h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .headers p {
+            margin-top: 5px;
+            font-size: 1.2em;
+        }
+
+
+
+
+
+
+        /* Barre de nav*/
+        .navigation {
+            overflow: hidden;
+            background-color: black;
+            transition: max-height 0.3s;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+
+        }
+
+        /* Réduire la barre de navigation au défilement */
+        body.scrolled header {
+            background-color: #1f4662;
+        }
+
+        body.scrolled .navigation {
+            max-height: 50px;
+        }
+
+
+        /****/
+        header .fiches {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        header .fiche {
+
+            padding: 15px 20px;
+            border: 1px solid;
+            border-radius: 30px;
+            background: #cf004b;
+
+
+        }
+
+        header .fiche:hover {
+            background-color: #cf004b;
+            background-color: #fff;
+            border: 1px solid #cf004b;
+            color: #cf004b !important;
+
+        }
+
+
+        /*css du bordur du bal qui defile*/
+        .topnav a:hover {
+            border-bottom: 3px solid #cf004b;
+        }
+
+        .topnav a.active {
+            border-bottom: 3px solid #cf004b;
+        }
+
+        /*css barre de recherche*/
+        .topnav input[type=text] {
+            /*float: right;*/
+            padding: 4px;
+            padding-bottom: 9px;border: none;
+            margin-top: 8px;
+            margin-right: 0px;
+            font-size: 17px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .topnav a,
+            .topnav input[type=text] {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+
+            .topnav input[type=text] {
+                /*border: 1px solid #cf004b;*/
+                border-radius: 70px solid #cf004b;
+                
+    
+            }
+        }
+
+        button {
+            padding: 9px 10px;
+            margin-bottom: 5px;
+            background-color: #cf004b;
+            color: white;
+            border: 1px solid #cf004b;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #cf004b;
+            background-color: #fff;
+            border: 1px solid #cf004b;
+            color: #cf004b !important;
+        }
+
+
+
+        /*=============================================================Nouvelle entete==============================================*/
+    </style>
+
+
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <!-- css -->
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/3.1.1/iconify.min.js" integrity="sha512-oQ1yQwSEIc9CTcK7pffEyS8fxom2iUWQrALk3j3+wfdSDjQ77EZbzGMGe2ZYmfoC8M9vR47apbS1ZYbW05y/pg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- font -->
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <!--************************************************Lien de la feuille JAVASCRIPT**********************************************************************-->
+    <script src="main.js"></script>
+    <!--************************************************Lien de la feuille JAVASCRIPT**********************************************************************-->
+
+
+
+
+
+</head>
+
+
+<body>
+
+    <!--==========================================================================Nouvelle entete======================================-->
+    <div class="block">
+        <!-- **************************header*************************** -->
+
+        <header class="header">
+            <div class=" fiches">
+                <a href="index.html" class="header-logo">
+                    <img src="src/img/logomfc.png" alt="logo" class="logo" style="font-size: 150px;"></a>
+
+                <!--=================Barre de recherche=================-->
+                <div class="topnav">
+                    <input type="text" placeholder="Un mot clé..">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <!--*************************************************Menu de navigation*************************-->
+                <div><a href="Formulaireinscri.html" class="fiche" style="color:white ; font-size: 16px; ">Formulaire
+                        d'inscription</a></div>
+            </div>
+
+
+        </header>
+        <div class="navigation">
+            <nav class="header-menu">
+                <ul class="navalign">
+                    <div class="topnav">
+                        <li>
+                            <a href="index.php">Accueil</a>
+                        </li>
+                        <li><a href="Espaceclient.html">Espace client</a></li>
+                        <!--<li><a href="Formulaireinscri.html">Formulaire d'inscription</a></li>-->
+                        <li><a href="contacteznous.php">Contactez-nous</a></li>
+                    </div>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="block headers">
+            <h1>Formation Professionnelle</h1>
+            <p>Acquérir de nouvelles compétences pour réussir dans votre carrière</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Ajouter une classe lorsque la page est défilée
+        window.onscroll = function () {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.body.classList.add("scrolled");
+            } else {
+                document.body.classList.remove("scrolled");
+            }
+        };
+    </script>
+
+    <!--==========================================================================Nouvelle entete======================================-->
+
+
+
+
+
+
+
+
+
+
+
+    <section class="wp-block-cegos-cegos-page-section page-section page-section__container texte">
+        <p><strong>Le dispositif Transitions Collectives ou « Transco » a été conçu pour faciliter les reconversions des
+                métiers fragilisés vers les métiers d’avenir au sein d’un même bassin d’emploi.</strong></p>
+        <figure class="wp-block-image aligncenter size-large">
+            <picture class="wp-image-44769">
+                <source
+                    srcset="https://static3.cegos.fr/content/uploads/2021/05/31155206/transitions-collectives-920x80-1.png.webp 920w,https://static3.cegos.fr/content/uploads/2021/05/31155206/transitions-collectives-920x80-1-768x67.png.webp 768w,https://static3.cegos.fr/content/uploads/2021/05/31155206/transitions-collectives-920x80-1-640x56.png.webp 640w,https://static3.cegos.fr/content/uploads/2021/05/31155206/transitions-collectives-920x80-1-320x28.png.webp 320w"
+                    sizes="(min-width:920px) 920px" type="image/webp"><img
+                    src="https://static3.cegos.fr/content/uploads/2021/05/31155206/transitions-collectives-920x80-1.png"
+                    class="wp-image-44769" alt="Transitions Collectives"
+                    srcset="https://static3.cegos.fr/content/uploads/2021/05/31155206/transitions-collectives-920x80-1.png 920w,https://static3.cegos.fr/content/uploads/2021/05/31155206/transitions-collectives-920x80-1-768x67.png 768w,https://static3.cegos.fr/content/uploads/2021/05/31155206/transitions-collectives-920x80-1-640x56.png 640w,https://static3.cegos.fr/content/uploads/2021/05/31155206/transitions-collectives-920x80-1-320x28.png 320w"
+                    sizes="(min-width:920px) 920px" loading="lazy">
+            </picture>
+        </figure>
+        <p>&nbsp;</p>
+        <p>Actualités - <strong>Une nouvelle instruction N° DGEFP/MFNE/2022/72 relative au déploiement du dispositif
+                «Transitions collectives » prévu par France relance, a été publié le 18 mars 2022</strong> (elle modifie
+            la précédente instruction N° DGEFP/2022/35 du 7 février 2022). Elle renforce les modalités de prise en
+            charge par l’Etat des coûts de formation et, uniquement pour Transitions collectives-Transco, des coûts de
+            rémunération, lorsque les salariés bénéficient de formations certifiantes dont la durée excède une année ou
+            1 200 heures. </p>
+        <h2><strong>Le dispositif Transitions Collectives en bref</strong></h2>
+        <p><strong>Déployé depuis le 15 janvier 2021, Transitions collectives (Transco) permet d’anticiper les mutations
+                économiques de l’entreprise en accompagnant les salariés volontaires dans leur reconversion vers un
+                métier porteur au sein de leur bassin d'emploi.</strong></p>
+        <p>L'objectif de Transitions Collectives est d’organiser une transition d’un métier vers un autre en évitant un
+            licenciement. Le dispositif facilite la reconversion des salariés dont l’emploi est menacé et leur
+            recrutement par des entreprises ayant des besoins en compétences, au sein d’un même bassin d’emploi.
+            <strong>Concrètement, les salariés, dont l’emploi est menacé, peuvent bénéficier d'une formation financée
+                par l'Etat, tout en conservant leur rémunération et leur contrat de travail. </strong> Ce cycle de
+            formation doit être certifiant et d’une durée maximum de 24 mois.
+        </p>
+        <h2><strong>Un dispositif financé par l’État</strong></h2>
+        <p>La prise en charge du cycle de formation (rémunération et formation) est financée dans le cadre de France
+            Relance via le <a
+                href="/actualites/news/fne-crise-sanitaire-financement-des-formations-des-entreprises-impactees">FNE-Formation</a>
+            à hauteur de 500 millions d’euros. Elle varie en fonction de la taille de l’entreprise, cette dernière
+            s'engageant à financer le reste à charge.</p>
+        <ul>
+            <li><strong>S’agissant des parcours dont la durée n’excèdant pas 12 mois</strong> ou 1 200 heures de
+                formation :</li>
+        </ul>
+        <figure class="wp-block-image aligncenter size-full">
+            <picture class="wp-image-57529">
+                <source
+                    srcset="https://static3.cegos.fr/content/uploads/2022/03/25085357/prise-en-charge-TransCo-mars2022.png.webp 600w,https://static3.cegos.fr/content/uploads/2022/03/25085357/prise-en-charge-TransCo-mars2022-320x76.png.webp 320w"
+                    sizes="(min-width:600px) 600px" type="image/webp"><img
+                    src="https://static3.cegos.fr/content/uploads/2022/03/25085357/prise-en-charge-TransCo-mars2022.png"
+                    class="wp-image-57529"
+                    srcset="https://static3.cegos.fr/content/uploads/2022/03/25085357/prise-en-charge-TransCo-mars2022.png 600w,https://static3.cegos.fr/content/uploads/2022/03/25085357/prise-en-charge-TransCo-mars2022-320x76.png 320w"
+                    sizes="(min-width:600px) 600px" loading="lazy">
+            </picture>
+        </figure>
+        <ul>
+            <li><strong>S'agissant des parcours dont la durée excède 12 mois</strong> ou 1 200 heures, les niveaux de
+                prises en charge ont été relevés (Instruction N° DGEFP/MFNE/2022/72). L'objectif étant de favoriser les
+                parcours de reconversion nécessitant des formations longues de nature à mieux répondre aux besoins des
+                entreprises faisant face à des difficultés de recrutement :</li>
+        </ul>
+        <figure class="wp-block-image aligncenter size-full">
+            <picture class="wp-image-57531">
+                <source
+                    srcset="https://static3.cegos.fr/content/uploads/2022/03/25090138/prise-en-charge-TransCo-mars2022_long.png.webp 600w,https://static3.cegos.fr/content/uploads/2022/03/25090138/prise-en-charge-TransCo-mars2022_long-320x69.png.webp 320w"
+                    sizes="(min-width:600px) 600px" type="image/webp"><img
+                    src="https://static3.cegos.fr/content/uploads/2022/03/25090138/prise-en-charge-TransCo-mars2022_long.png"
+                    class="wp-image-57531"
+                    srcset="https://static3.cegos.fr/content/uploads/2022/03/25090138/prise-en-charge-TransCo-mars2022_long.png 600w,https://static3.cegos.fr/content/uploads/2022/03/25090138/prise-en-charge-TransCo-mars2022_long-320x69.png 320w"
+                    sizes="(min-width:600px) 600px" loading="lazy">
+            </picture>
+        </figure>
+        <p><a href="https://www.legifrance.gouv.fr/download/pdf/circ?id=45306" target="_blank"
+                rel="noreferrer noopener">Consulter l'instuction DGEFP/MFNE/2022/72 du 18 mars 2022.</a></p>
+        <h2><strong>Un dispositif encadré</strong></h2>
+        <p>Le dispositif Transitions Collectives est activé à l’initiative des entreprises et de leurs salariés. Il vise
+            toutes les entreprises, y compris les plus petites. La signature d’un accord d’entreprise de GEPP est
+            indispensable à la mobilisation du dispositif (*Gestion des parcours professionnels, nouvelle dénomination
+            de la GPEC, Gestion prévisionnelle des emplois et des compétences.) Il permet d’identifier les métiers
+            fragilisés.</p>
+        <p><strong>Le salarié doit occuper un métier fragilisé identifié dans l’accord GEPP, être volontaire et se
+                positionner sur une formation certifiante permettant d’accéder à un métier porteur dans le bassin
+                d’emploi. </strong>Ce sont les services de l’Etat, avec l’appui des Crefop qui élaborent les listes de
+            métiers « porteurs » sur les territoires. Un métier porteur est, soit un métier émergent issu de nouveaux
+            domaines d’activité en plein essor, soit un métier en tension dans un secteur d’activité qui peine à
+            recruter. <strong><a
+                    href="https://travail-emploi.gouv.fr/formation-professionnelle/formation-des-salaries/transitions_collectives/article/les-metiers-porteurs-en-region"
+                    target="_blank" rel="noreferrer noopener">Retrouvez la liste des métiers porteurs par région sur le
+                    site du Ministère du Travail</a>.</strong></p>
+        <p>Le dispositif est animé par les DREETS (ex-DIRECCTE) en lien avec les Associations Transition Pro (ATPro),
+            les opérateurs du Conseil en Evolution Professionnelle (CEP) et les OPCO, au niveau de chaque territoire.
+        </p>
+        <h2><strong>Quelles sont les formations&nbsp;concernées</strong> ?</h2>
+        <p>Le projet porté par un salarié dans le cadre d’un parcours de Transitions collectives doit donc viser une
+            formation de reconversion vers un métier dit porteur sur le territoire.</p>
+        <ul>
+            <li>Les formations doivent visées une certification&nbsp;(RNCP, Répertoire spécifique, VAE…)</li>
+            <li>La formation peut permettre une reconversion vers un métier porteur d’une autre région mais doit être
+                justifiée.</li>
+            <li>Plusieurs actions de formation certifiantes peuvent être suivies dans le cadre d’un parcours de
+                Transitions Collectives</li>
+        </ul>
+        <p>L’action de formation financée dans le cadre d’un parcours de transitions collectives ne peut excéder 24 mois
+            ou 2 400 heures.</p>
+
+
+        <ul>
+
+            <li>
+                Si une action de formation excède cette durée, le financement ne sera pas pris en charge&nbsp;;
+
+            </li>
+            <li>En revanche, l’entreprise qui souhaite recruter le salarié à l’issue de son parcours de reconversion
+                pourrait, si besoin, financer la fin de l’action de formation.
+
+            </li>
+        </ul>
+
+
+
+    </section>
+
+
+
+
+    <!--****************************Section essai-->
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="first-col">
+                        <div class="col-sm-6 col-md-3 item first-col-footer ">
+                            <h3>Nos offres</h3>
+                            <ul>
+                                <li><a href="interentreprise.html">Interentrprise</a></li>
+                                <li><a href="intraentreprise.html">Intra-entreprise</a></li>
+                                <li><a href="aututorat.html">Sur-mésure</a></li>
+                                <li><a href="diplomecertifiante.html">Diplômante et certifiante</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item first-col-footer-2">
+                            <h3>Trouver facilement</h3>
+                            <ul>
+                                <li><a href="#">Qui sommes-nous?</a></li>
+                                <li><a href="#">Nous contactez</a></li>
+                                <li><a href="#">Mentions légales</a></li>
+                                <li><a href="#">Cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 item text">
+
+                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
+                        rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel
+                        in justo.</p>
+                </div>
+                <!--***********************************image footer***********************************************-->
+                <div class="contenair-img-footer">
+                    <ul>
+                        <li><a href="index.html"><img src="src/img/logomfc.png" alt="logo" class="imglogofooter"></a>
+                        </li>
+                        <li><img src="src/img/imgfooter1.jpg" alt="image dans le footer" class="imgfooters"></li>
+                        <li><img src="src/img/logo NextGeneration EUfooter3.png" alt="image drapeau" class="EUfooter">
+                        </li>
+                        <li><img src="src/img/logo-france-relancefooter2.png" alt="image drapeau" class="relancefooter">
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+                <div class="col item social"><a href="https://www.facebook.com/"><i
+                            class="fab fa-facebook"></i></i></a><a href="#"><i class="fab fa-twitter"></i></a><a
+                        href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a><a
+                        href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></div>
+            </div>
+            <p class="copyright">Copyright © 2024 Camille Yoyo - Tous droits réservés</p>
+    </div>
+    </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--FORMULAIRE DE CONATCT BULMA-->
+    yy<!--video arrière plan-->
+    <div class="video-background">
+        <video autoplay muted loop id="myVideo">
+            <source src="src/img/video1.mp4" type="video/mp4">
+        </video>
+
+        <!--*****************************************video arrière plan*************************************-->
+
+        <div class="contenair-contact">
+            <div class="field">
+                <label class="label">Nom</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Votre Nom">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Prenom</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-success" type="text" placeholder="Votre Prenom" value="">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-danger" type="email" placeholder="Votre adresse mail" value="">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                        <!--<i class="fas fa-exclamation-triangle"></i>-->
+                    </span>
+                </div>
+                <!--<p class="help is-danger">Votre email est invalid</p>-->
+            </div>
+
+
+
+            <div class="field">
+                <label class="label">Laissez-nous un Message</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Facultatif"></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        J'accepte les <a href="#">conditions d'utilisations</a>
+                    </label>
+                </div>
+            </div>
+
+
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Envoyer</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link is-light">Annuler</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+<?php
+// Vérifier si le formulaire a été soumis
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Récupérer les valeurs du formulaire
+    $NomS = $_POST["NomS"];
+    $PrenomS = $_POST["PrenomS"];
+    $TelS = $_POST["TelS"];
+    $AdresseS = $_POST["AdresseS"];
+    $MailS = $_POST["MailS"];
+    $EntrepriseS = $_POST["EntrepriseS"];
+
+    // Vous pouvez ajouter des validations supplémentaires ici
+
+    // Se connecter à la base de données (remplacez les informations de connexion par les vôtres)
+    $user = 'root';
+    $password = '';
+    $db = 'mfc';
+    $host = 'localhost';
+    $port = 3306;
+
+    $connexion = mysqli_connect($host, $user, $password, $db);
+
+    // Vérifier la connexion à la base de données
+    if (!$connexion) {
+        die("La connexion à la base de données a échoué : " . mysqli_connect_error());
+    }
+
+    // Échapper les données pour éviter les injections SQL
+    $NomS = mysqli_real_escape_string($connexion, $NomS);
+    $PrenomS = mysqli_real_escape_string($connexion, $PrenomS);
+    $TelS = mysqli_real_escape_string($connexion, $TelS);
+    $AdresseS = mysqli_real_escape_string($connexion, $AdresseS);
+    $MailS = mysqli_real_escape_string($connexion, $MailS);
+    $EntrepriseS = mysqli_real_escape_string($connexion, $EntrepriseS);
+
+    // Insérer les données dans la base de données
+    $requete = "INSERT INTO Stagiaires (NomS, PrenomS, TelS, AdresseS, MailS, EntrepriseS) VALUES ('$NomS', '$PrenomS', '$TelS', '$AdresseS', '$MailS', '$EntrepriseS')";
+
+    $resultat = mysqli_query($connexion, $requete);
+
+    if ($resultat) {
+        $nouvel_id = mysqli_insert_id($connexion);
+        echo "Inscription réussie ! L'ID de l'utilisateur est : " . $nouvel_id;
+    } else {
+        echo "Erreur lors de l'inscription : " . mysqli_error($connexion);
+    }
+
+    // Fermer la connexion à la base de données
+    mysqli_close($connexion);
+}
+?>
+
+
+
+<?php
+
+$NomS = $_POST['NomS'];
+$PrenomS = $_POST['PrenomS'];
+$TelS = $_POST['TelS'];
+$AdresseS = $_POST['AdresseS'];
+$MailS = $_POST['MailS'];
+$EntrepriseS = $_POST['EntrepriseS'];
+$mdp = $_POST['mdp'];
+$cmp = $_POST['cmp'];
+
+
+// Vérifier la correspondance des mots de passe
+if ($mdp == $cmp) {
+    // Se connecter à la base de données
+    $user = 'root';
+    $password = '';
+    $db = 'mfc';
+    $host = 'localhost';
+    // $port = 3307;
+    $connexion = mysqli_connect($host, $user, $password, $db);
+    // Vérifier si la connexion a réussi
+    if (!$connexion) {
+        die("La connexion a échoué : " . mysqli_connect_error());
+    }
+
+    // Traitement du formulaire
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $NomS = $_POST['NomS'];
+        $PrenomS = $_POST['PrenomS'];
+        $Tel_S = $_POST['TelS'];
+        $Adresse_S = $_POST['AdresseS'];
+        $Mail_S = $_POST['MailS'];
+        $Entreprise = $_POST['EntrepriseS'];
+        $mdp = $_POST['mdp'];
+        $cmp = $_POST['cmp'];
+
+
+        // Vérification des champs
+        if (
+            !empty($NomS) && !empty($PrenomS) && !empty($Tel_S) &&
+            !empty($Adresse_S) && !empty($Mail_S) && !empty($Entreprise) && !empty($mdp)
+            && !empty($cmp))
+
+         {
+            // Vérification de la correspondance des mots de passe
+            if ($mdp == $cmp) {
+                // Enregistrement des données dans la base de données
+                $requete = "INSERT INTO Stagiaires (NomS, PrenomS, TelS, AdresseS, MailS, EntrepriseS, mdp, cmdp) VALUES ('$NomS', '$PrenomS','$TelS', '$AdresseS', '$MailS', '$EntrepriseS','$mdp', '$cmp')";
+                if (mysqli_query($connexion, $requete)) {
+                    echo "Les données ont bien été enregistrées.";
+                } else {
+                    echo "Erreur: " . $requete . "<br>" . mysqli_error($connexion);
+                }
+            } else {
+                echo "Les mots de passe ne correspondent pas.";
+            }
+        } else {
+            echo "Veuillez remplir tous les champs du formulaire.";
+        }
+    }
+
+    // Fermer la connexion à la base de données
+    mysqli_close($connexion);
+} else {
+
+    echo "Les mots de passe ne correspondent pas.";
+}
